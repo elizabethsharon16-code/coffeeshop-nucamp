@@ -1,0 +1,54 @@
+[debug] [2025-12-27T18:33:41.499Z] ----------------------------------------------------------------------
+[debug] [2025-12-27T18:33:41.502Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2025-12-27T18:33:41.503Z] CLI Version:   12.9.1
+[debug] [2025-12-27T18:33:41.503Z] Platform:      darwin
+[debug] [2025-12-27T18:33:41.503Z] Node Version:  v22.17.1
+[debug] [2025-12-27T18:33:41.503Z] Time:          Sat Dec 27 2025 10:33:41 GMT-0800 (Pacific Standard Time)
+[debug] [2025-12-27T18:33:41.503Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-27T18:33:41.510Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-27T18:33:41.510Z] > authorizing via signed-in user (beaujsterling@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/beausterling/Downloads/nucampsite/coffeeshop
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-12-27T18:35:22.601Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-12-27T18:35:22.602Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"coffeeshop-nucamp","name":"coffeeshop"}
+[debug] [2025-12-27T18:35:23.223Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-12-27T18:35:23.224Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.5978574127972874862"}
+[debug] [2025-12-27T18:35:23.224Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 [none]
+[debug] [2025-12-27T18:35:23.345Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 200
+[debug] [2025-12-27T18:35:23.345Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 {"name":"operations/create_project.global.5978574127972874862"}
+[debug] [2025-12-27T18:35:23.846Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-12-27T18:35:23.846Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 [none]
+[debug] [2025-12-27T18:35:23.954Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 200
+[debug] [2025-12-27T18:35:23.954Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 {"name":"operations/create_project.global.5978574127972874862"}
+[debug] [2025-12-27T18:35:24.955Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-12-27T18:35:24.955Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 [none]
+[debug] [2025-12-27T18:35:25.036Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 200
+[debug] [2025-12-27T18:35:25.036Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5978574127972874862 {"name":"operations/create_project.global.5978574127972874862","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"26837138162","projectId":"coffeeshop-nucamp","lifecycleState":"ACTIVE","name":"coffeeshop","createTime":"2025-12-27T18:35:24.383067Z"}}
+[debug] [2025-12-27T18:35:25.038Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/coffeeshop-nucamp:addFirebase [none]
+[debug] [2025-12-27T18:35:25.969Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/coffeeshop-nucamp:addFirebase 403
+[debug] [2025-12-27T18:35:25.969Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/coffeeshop-nucamp:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-12-27T18:35:25.969Z] HTTP Error: 403, The caller does not have permission
+[debug] [2025-12-27T18:35:26.014Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
